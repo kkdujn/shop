@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>상품 상세</title>
+<title id="pageTitle">상품 상세 - SHOP</title>
+<meta name="description" id="pageDescription" content="SHOP에서 판매하는 의류 상품의 상세 정보, 사이즈와 색상을 확인하세요." />
+<link rel="canonical" id="pageCanonical" href="https://shop-eight-beta-51.vercel.app/product.html" />
+
+<meta property="og:type" content="product" />
+<meta property="og:site_name" content="SHOP" />
+<meta property="og:title" id="ogTitle" content="상품 상세 - SHOP" />
+<meta property="og:description" id="ogDescription" content="SHOP에서 판매하는 의류 상품의 상세 정보를 확인하세요." />
+<meta property="og:url" id="ogUrl" content="https://shop-eight-beta-51.vercel.app/product.html" />
+<meta property="og:image" id="ogImage" content="https://placehold.co/1200x630/222222/ffffff?text=SHOP" />
+<meta name="twitter:card" content="summary_large_image" />
+
 <link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json" id="productJsonLd"></script>
 </head>
 <body>
 <header class="site-header">
@@ -16,6 +28,10 @@
 </header>
 
 <main id="productMain"></main>
+
+<noscript>
+  <p>이 페이지는 자바스크립트가 필요합니다. <a href="index.html">상품 목록으로 돌아가기</a></p>
+</noscript>
 
 <div class="toast" id="toast">장바구니에 담았습니다</div>
 

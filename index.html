@@ -3,8 +3,61 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>의류 쇼핑 - 상품 목록</title>
+<title>SHOP - 상의·하의·아우터·신발·액세서리 온라인 쇼핑몰</title>
+<meta name="description" content="비회원도 간편하게 둘러보고 구매할 수 있는 의류 쇼핑몰. 상의, 하의, 아우터, 신발, 액세서리를 카테고리별로 탐색하고 최신순·가격순으로 정렬해 보세요." />
+<link rel="canonical" href="https://shop-eight-beta-51.vercel.app/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SHOP" />
+<meta property="og:title" content="SHOP - 상의·하의·아우터·신발·액세서리 온라인 쇼핑몰" />
+<meta property="og:description" content="비회원도 간편하게 둘러보고 구매할 수 있는 의류 쇼핑몰. 카테고리별 탐색과 최신순·가격순 정렬을 지원합니다." />
+<meta property="og:url" content="https://shop-eight-beta-51.vercel.app/" />
+<meta property="og:image" content="https://placehold.co/1200x630/222222/ffffff?text=SHOP" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SHOP - 온라인 의류 쇼핑몰" />
+<meta name="twitter:description" content="비회원도 간편하게 둘러보고 구매할 수 있는 의류 쇼핑몰." />
+<meta name="twitter:image" content="https://placehold.co/1200x630/222222/ffffff?text=SHOP" />
+
 <link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SHOP",
+  "url": "https://shop-eight-beta-51.vercel.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://shop-eight-beta-51.vercel.app/index.html?category={category}",
+    "query-input": "required name=category"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=1", "name": "오버핏 코튼 티셔츠" },
+    { "@type": "ListItem", "position": 2, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=2", "name": "스트라이프 니트" },
+    { "@type": "ListItem", "position": 3, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=3", "name": "옥스포드 셔츠" },
+    { "@type": "ListItem", "position": 4, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=4", "name": "후드 스웨트셔츠" },
+    { "@type": "ListItem", "position": 5, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=5", "name": "슬림 데님 팬츠" },
+    { "@type": "ListItem", "position": 6, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=6", "name": "와이드 슬랙스" },
+    { "@type": "ListItem", "position": 7, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=7", "name": "카고 조거 팬츠" },
+    { "@type": "ListItem", "position": 8, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=8", "name": "코튼 숏팬츠" },
+    { "@type": "ListItem", "position": 9, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=9", "name": "울 블렌드 코트" },
+    { "@type": "ListItem", "position": 10, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=10", "name": "경량 패딩 재킷" },
+    { "@type": "ListItem", "position": 11, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=11", "name": "데님 자켓" },
+    { "@type": "ListItem", "position": 12, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=12", "name": "바시티 자켓" },
+    { "@type": "ListItem", "position": 13, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=13", "name": "캔버스 스니커즈" },
+    { "@type": "ListItem", "position": 14, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=14", "name": "러닝 슈즈" },
+    { "@type": "ListItem", "position": 15, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=15", "name": "첼시 부츠" },
+    { "@type": "ListItem", "position": 16, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=16", "name": "크로스백" },
+    { "@type": "ListItem", "position": 17, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=17", "name": "니트 비니" },
+    { "@type": "ListItem", "position": 18, "url": "https://shop-eight-beta-51.vercel.app/product.html?id=18", "name": "레더 벨트" }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -16,6 +69,7 @@
 </header>
 
 <main>
+  <h1 class="visually-hidden">상의·하의·아우터·신발·액세서리 온라인 쇼핑몰 SHOP</h1>
   <div class="category-tabs" id="categoryTabs"></div>
   <div class="toolbar">
     <select id="sortSelect">
@@ -25,6 +79,9 @@
     </select>
   </div>
   <div class="product-grid" id="productGrid"></div>
+  <noscript>
+    <p>이 페이지는 자바스크립트가 필요합니다. 상품 목록: 오버핏 코튼 티셔츠, 스트라이프 니트, 옥스포드 셔츠, 후드 스웨트셔츠, 슬림 데님 팬츠, 와이드 슬랙스, 카고 조거 팬츠, 코튼 숏팬츠, 울 블렌드 코트, 경량 패딩 재킷, 데님 자켓, 바시티 자켓, 캔버스 스니커즈, 러닝 슈즈, 첼시 부츠, 크로스백, 니트 비니, 레더 벨트.</p>
+  </noscript>
 </main>
 
 <script src="data.js"></script>

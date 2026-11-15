@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /success.html
+Disallow: /fail.html
+Disallow: /complete.html
+Disallow: /api/
+
+Sitemap: https://shop-eight-beta-51.vercel.app/sitemap.xml

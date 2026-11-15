@@ -9,6 +9,41 @@ function updateCartBadge() {
   if (badge) badge.textContent = cartItemCount();
 }
 
+function updateSeoTags() {
+  if (!product) return;
+
+  const title = `${product.name} - SHOP`;
+  const description = `${product.name} (${formatPrice(product.price)}) - ${product.category} 카테고리. 사이즈 ${product.sizes.join("/")}, 색상 ${product.colors.join("/")} 중 선택할 수 있습니다.`;
+  const url = `https://shop-eight-beta-51.vercel.app/product.html?id=${product.id}`;
+
+  document.getElementById("pageTitle").textContent = title;
+  document.getElementById("pageDescription").setAttribute("content", description);
+  document.getElementById("pageCanonical").setAttribute("href", url);
+  document.getElementById("ogTitle").setAttribute("content", title);
+  document.getElementById("ogDescription").setAttribute("content", description);
+  document.getElementById("ogUrl").setAttribute("content", url);
+  document.getElementById("ogImage").setAttribute("content", product.thumbnail);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.thumbnail,
+    category: product.category,
+    url,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "KRW",
+      price: product.price,
+      availability: product.soldOut
+        ? "https://schema.org/OutOfStock"
+        : "https://schema.org/InStock",
+      url,
+    },
+  };
+  document.getElementById("productJsonLd").textContent = JSON.stringify(jsonLd);
+}
+
 function renderProduct() {
   const main = document.getElementById("productMain");
   if (!product) {
@@ -93,4 +128,5 @@ function showToast() {
 }
 
 renderProduct();
+updateSeoTags();
 updateCartBadge();
