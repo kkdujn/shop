@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>주문정보 입력</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">SHOP</a>
+  <a class="cart-link" href="cart.html">
+    🛒
+    <span class="cart-badge" id="cartBadge">0</span>
+  </a>
+</header>
+
+<main>
+  <h1 style="font-size:20px;">주문정보 입력</h1>
+
+  <div class="order-summary-box" id="orderSummaryBox"></div>
+
+  <form id="checkoutForm" novalidate>
+    <div class="form-group">
+      <label for="recipientName">받는사람 이름</label>
+      <input type="text" id="recipientName" />
+      <p class="field-error" id="err-recipientName">이름을 입력해주세요.</p>
+    </div>
+    <div class="form-group">
+      <label for="phone">전화번호</label>
+      <input type="text" id="phone" placeholder="010-0000-0000" />
+      <p class="field-error" id="err-phone">전화번호를 입력해주세요.</p>
+    </div>
+    <div class="form-group">
+      <label for="address">배송지 주소</label>
+      <input type="text" id="address" />
+      <p class="field-error" id="err-address">배송지 주소를 입력해주세요.</p>
+    </div>
+    <div class="form-group">
+      <label for="requestNote">배송 요청사항 (선택)</label>
+      <textarea id="requestNote" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="primary-btn" id="submitOrderBtn">주문 제출</button>
+  </form>
+</main>
+
+<script src="https://js.tosspayments.com/v2/standard"></script>
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>장바구니</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">SHOP</a>
+  <a class="cart-link" href="cart.html">
+    🛒
+    <span class="cart-badge" id="cartBadge">0</span>
+  </a>
+</header>
+
+<main>
+  <h1 style="font-size:20px;">장바구니</h1>
+  <div class="cart-list" id="cartList"></div>
+  <div class="cart-summary" id="cartSummary" style="display:none;">
+    <div class="row"><span>총 합계</span><span id="cartTotal">0원</span></div>
+  </div>
+  <button class="primary-btn" id="orderBtn">주문하기</button>
+</main>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="cartpage.js"></script>
+</body>
+</html>

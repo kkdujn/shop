@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>의류 쇼핑 - 상품 목록</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">SHOP</a>
+  <a class="cart-link" href="cart.html">
+    🛒
+    <span class="cart-badge" id="cartBadge">0</span>
+  </a>
+</header>
+
+<main>
+  <div class="category-tabs" id="categoryTabs"></div>
+  <div class="toolbar">
+    <select id="sortSelect">
+      <option value="latest">최신순</option>
+      <option value="price-asc">가격 낮은순</option>
+      <option value="price-desc">가격 높은순</option>
+    </select>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</main>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="list.js"></script>
+</body>
+</html>
